@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple example</title>
+</head>
+<body>
+<button onclick="generate()">Generate pdf</button>
+
+<script src="http://mrrio.github.io/jsPDF/dist/jspdf.debug.js"></script>
+<script src="https://rawgit.com/someatoms/jsPDF-AutoTable/master/dist/jspdf.plugin.autotable.js"></script>
+
+<script>
+    function generate() {
+        var columns = ["First Name", "Last Name", "ID"];
+
+        var data = [
+            ["AAA", "ZZZ", "50"],
+            ["Simon", "Gothenburg",23],
+            ["Hanna", "Stockholm", 200]
+        ];
+        var doc = new jsPDF('p', 'pt');
+        doc.autoTable(columns, data);
+        doc.save("table.pdf");
+    }
+</script>
+</body>

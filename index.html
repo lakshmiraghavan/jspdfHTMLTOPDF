@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+  <head>
+      <!-- Latest compiled and minified CSS -->
+      <link  rel="stylesheet" href="CSSTableGenerator.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+      <!-- Optional theme -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+      <script src="bower_components/angular/angular.min.js"></script>
+      <script src="bower_components/jquery/dist/jquery.min.js"></script>
+      <script src="http://mrrio.github.io/jsPDF/dist/jspdf.debug.js"></script>
+      <script src="https://rawgit.com/someatoms/jsPDF-AutoTable/master/dist/jspdf.plugin.autotable.js"></script>
+      <script src="https://rawgithub.com/eligrey/FileSaver.js/master/FileSaver.js"></script>
+      <script src="appScript.js"></script>
+  </head>
+  <body ng-controller="myCtrl">
+
+    <h1>Node HTML to PDF Test Using JSPDF</h1>
+
+    <div class="panel panel-default">
+        <!-- Default panel contents -->
+        <div class="panel-heading">My Test Table
+            <div my-table id="table"></div>
+        </div>
+
+        <!-- Table -->
+
+        <button type="button" ng-click="printPdfDynamic()">Export to PDF</button>
+        <button type="button" ng-click="printToExcel()">Export to EXCEL</button>
+
+    </div>
+
+  </body>
+</html>
